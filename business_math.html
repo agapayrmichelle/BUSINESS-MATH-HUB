@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Math Hub</title>
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; }
+header { background:#4CAF50; color:white; padding:20px 0; text-align:center; }
+nav { background:#333; }
+nav ul { list-style:none; display:flex; justify-content:center; margin:0; padding:0; flex-wrap:wrap; }
+nav ul li { margin:0 10px; }
+nav ul li a { color:white; text-decoration:none; padding:14px 10px; display:block; }
+nav ul li a:hover { background:#575757; border-radius:4px; }
+section { padding:50px 20px; max-width:1000px; margin:auto; }
+section h2 { text-align:center; color:#333; }
+.content { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:30px; }
+.card { background:white; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.2); width:300px; text-align:center; }
+button { padding:8px 15px; margin-top:10px; background:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer; }
+button:hover { background:#45a049; }
+.answer { display:none; margin-top:10px; padding:10px; background:#f0f0f0; border-radius:4px; }
+input[type="text"], select { width:80%; padding:5px; margin-top:5px; }
+iframe { width:100%; height:200px; border:none; border-radius:8px; margin-top:10px; }
+footer { background:#333; color:white; text-align:center; padding:20px 0; margin-top:50px; }
+ul { text-align:left; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Business Math Hub</h1>
+<p>Learn Salary, Wages, Commission & More – Read, Write, Play, Use!</p>
+</header>
+
+<nav>
+<ul>
+<li><a href="#read">Read</a></li>
+<li><a href="#write">Write</a></li>
+<li><a href="#play">Play</a></li>
+<li><a href="#use">Use</a></li>
+</ul>
+</nav>
+
+<!-- READ SECTION -->
+<section id="read">
+<h2>📖 Read</h2>
+<div class="content">
+
+<!-- Reading Notes Card -->
+<div class="card">
+<h3>Understanding Salary, Wages, Commission</h3>
+<p><strong>Salary:</strong> Fixed amount paid regularly (monthly/yearly). Example: ₱20,000/month.</p>
+<p><strong>Wages:</strong> Paid based on hours or days worked. Formula: <em>Wages = Hourly Rate × Hours Worked</em> or <em>Daily Wage × Days Worked</em></p>
+<p><strong>Commission:</strong> Payment based on sales. Formula: <em>Commission = Sales × Commission Rate</em></p>
+<p><strong>Tips:</strong> Always identify if pay is fixed (salary), time-based (wages), or performance-based (commission).</p>
+</div>
+
+<div class="card">
+<h3>Formulas & Examples</h3>
+<ul>
+<li>Weekly Salary from Daily Wage = Daily Wage × Number of Days Worked in a Week</li>
+<li>Weekly Salary from Annual Salary = Annual Salary ÷ 52</li>
+<li>Monthly Salary from Daily Wage = Daily Wage × Number of Working Days in Month</li>
+<li>Monthly Salary from Annual Salary = Annual Salary ÷ 12</li>
+<li>Gross Income = Salary + Wages + Commission</li>
+<li>Net Pay = Gross Income – Taxes/Deductions</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Video Tutorial</h3>
+<iframe src="https://www.youtube.com/embed/IlJw0mACR9g?si=USCjKYqUczK62Nlp" allowfullscreen></iframe>
+</div>
+
+</div>
+</section>
+
+<!-- WRITE SECTION -->
+<section id="write">
+<h2>✏️ Write</h2>
+<div class="content">
+
+<div class="card">
+<h3>Compute Weekly Salary from Daily Wage</h3>
+<p>Juan earns ₱500/day. Compute salary for 6 days:</p>
+<input type="text" id="input1" placeholder="Type answer">
+<button onclick="checkAnswer('input1',3000,'feedback1')">Check Answer</button>
+<div id="feedback1" class="answer"></div>
+</div>
+
+<div class="card">
+<h3>Compute Weekly Salary from Annual Salary</h3>
+<p>Maria earns ₱240,000/year. Compute weekly salary:</p>
+<input type="text" id="input2" placeholder="Type answer">
+<button onclick="checkAnswer('input2',4615,'feedback2')">Check Answer</button>
+<div id="feedback2" class="answer"></div>
+</div>
+
+<div class="card">
+<h3>Compute Monthly Salary from Daily Wage</h3>
+<p>Juan earns ₱600/day, 22 working days. Compute monthly salary:</p>
+<input type="text" id="input3" placeholder="Type answer">
+<button onclick="checkAnswer('input3',13200,'feedback3')">Check Answer</button>
+<div id="feedback3" class="answer"></div>
+</div>
+
+<div class="card">
+<h3>Compute Monthly Salary from Annual Salary</h3>
+<p>Maria earns ₱360,000/year. Compute monthly salary:</p>
+<input type="text" id="input4" placeholder="Type answer">
+<button onclick="checkAnswer('input4',30000,'feedback4')">Check Answer</button>
+<div id="feedback4" class="answer"></div>
+</div>
+
+<div class="card">
+<h3>Compute Gross & Net Pay</h3>
+<p>Juan earns ₱20,000/month. Tax 10%. Compute net pay:</p>
+<input type="text" id="input5" placeholder="Type answer">
+<button onclick="checkAnswer('input5',18000,'feedback5')">Check Answer</button>
+<div id="feedback5" class="answer"></div>
+</div>
+
+<!-- Additional Activities -->
+<div class="card">
+<h3>Additional Problem</h3>
+<p>Maria earns ₱400/day for 25 days and 5% commission on ₱50,000 sales. Compute total gross income.</p>
+<input type="text" id="input6" placeholder="Type answer">
+<button onclick="checkAnswer('input6',15500,'feedback6')">Check Answer</button>
+<div id="feedback6" class="answer"></div>
+</div>
+
+<div class="card">
+<h3>Extra Problem: Net Pay</h3>
+<p>Juan earns ₱25,000/month. Tax 12% and insurance ₱1,000. Compute net pay.</p>
+<input type="text" id="input7" placeholder="Type answer">
+<button onclick="checkAnswer('input7',21000,'feedback7')">Check Answer</button>
+<div id="feedback7" class="answer"></div>
+</div>
+
+</div>
+</section>
+
+<!-- PLAY SECTION -->
+<section id="play">
+<h2>🎮 Play</h2>
+<div class="content">
+
+<div class="card">
+<h3>Multiple Choice Quiz</h3>
+<p>Select correct formula for Net Pay:</p>
+<select id="quiz1">
+<option value="">--Choose--</option>
+<option value="wrong">Net Pay = Gross Income × Tax Rate</option>
+<option value="correct">Net Pay = Gross Income – Taxes/Deductions</option>
+<option value="wrong2">Net Pay = Daily Wage × 7</option>
+</select>
+<button onclick="checkMCQ('quiz1','feedback8')">Submit</button>
+<div id="feedback8" class="answer"></div>
+</div>
+
+<div class="card">
+<h3>Drag & Match</h3>
+<p>Match example to Salary, Wages, Commission:</p>
+<ul id="dragList" style="text-align:left; list-style:none; padding:0;">
+<li>Maria earns ₱20,000/month fixed</li>
+<li>Juan earns ₱500/day</li>
+<li>Salesperson earns 5% of ₱50,000</li>
+</ul>
+<select id="drop1"><option value="">Select Category</option><option value="Salary">Salary</option><option value="Wages">Wages</option><option value="Commission">Commission</option></select><br>
+<select id="drop2"><option value="">Select Category</option><option value="Salary">Salary</option><option value="Wages">Wages</option><option value="Commission">Commission</option></select><br>
+<select id="drop3"><option value="">Select Category</option><option value="Salary">Salary</option><option value="Wages">Wages</option><option value="Commission">Commission</option></select><br>
+<button onclick="checkDragDrop()">Check Answers</button>
+<div id="feedback9" class="answer"></div>
+</div>
+
+<div class="card">
+<h3>Random Salary Challenge</h3>
+<p>Click the button to generate a random daily wage problem:</p>
+<button onclick="randomProblem()">Generate Problem</button>
+<div id="randomProblem" class="answer"></div>
+<input type="text" id="randomAnswer" placeholder="Type answer">
+<button onclick="checkRandomAnswer()">Check Answer</button>
+<div id="feedback10" class="answer"></div>
+</div>
+
+</div>
+</section>
+
+<!-- USE SECTION -->
+<section id="use">
+<h2>💻 Use</h2>
+<div class="content">
+<div class="card">
+<h3>Video Tutorials for Practice</h3>
+<iframe src="https://www.youtube.com/embed/hee5RYphJYY?si=gdtTs95kwvuMuFuY" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/JDQKCApdZiU?si=VfzKcmE3A1bz97tP" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/U0xJVrpjwQM?si=cul58WxgNJsNe4O8" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/I39FMdW5UVM?si=-m3SJA1ULV3X8nv_" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/3KGa1NKj0gI?si=8m0DfxyH3yiD6Wa3" allowfullscreen></iframe>
+</div>
+
+<div class="card">
+<h3>Practical Activity</h3>
+<p>Create a payroll table for 3 employees including salary, wages, commission, and net pay. Use deductions and tax rates.</p>
+<button onclick="toggleAnswer('guide')">Show Guide</button>
+<div id="guide" class="answer">
+1. List employee names<br>
+2. Input salary/daily wage/sales<br>
+3. Apply formulas for gross income<br>
+4. Deduct taxes and other deductions for net pay<br>
+5. Review results
+</div>
+</div>
+
+</div>
+</section>
+
+<footer style="background:#333; color:white; text-align:center; padding:20px 0; margin-top:50px;">
+    <p>Created by Ramhil Michelle H. Agapay & Christine Joy A. Ozaraga</p>
+  <p>Clarin National High School | Division of Misamis Occidental | 2025</p>
+</footer>
+
+<script>
+function toggleAnswer(id) {
+const element = document.getElementById(id);
+element.style.display = (element.style.display === "" || element.style.display === "none") ? "block" : "none";
+}
+
+function checkAnswer(inputId, correctAnswer, feedbackId) {
+const userAnswer = document.getElementById(inputId).value.trim();
+const feedback = document.getElementById(feedbackId);
+if(userAnswer === "") {
+feedback.style.display = "block";
+feedback.style.backgroundColor = "#ffcccc";
+feedback.textContent = "Please enter an answer!";
+return;
+}
+const userNum = Number(userAnswer);
+if(userNum === correctAnswer) {
+feedback.style.display = "block";
+feedback.style.backgroundColor = "#ccffcc";
+feedback.textContent = "✅ Correct!";
+} else {
+feedback.style.display = "block";
+feedback.style.backgroundColor = "#ffcccc";
+feedback.textContent = `❌ Incorrect. Correct answer: ${correctAnswer}`;
+}
+}
+
+// Multiple Choice
+function checkMCQ(selectId, feedbackId) {
+const select = document.getElementById(selectId);
+const feedback = document.getElementById(feedbackId);
+if(select.value === "correct") {
+feedback.style.display = "block";
+feedback.style.backgroundColor = "#ccffcc";
+feedback.textContent = "✅ Correct!";
+} else {
+feedback.style.display = "block";
+feedback.style.backgroundColor = "#ffcccc";
+feedback.textContent = "❌ Incorrect. Try again!";
+}
+}
+
+// Drag & Drop
+function checkDragDrop() {
+const drop1 = document.getElementById("drop1").value;
+const drop2 = document.getElementById("drop2").value;
+const drop3 = document.getElementById("drop3").value;
+const feedback = document.getElementById("feedback9");
+if(drop1==="Salary" && drop2==="Wages" && drop3==="Commission") {
+feedback.style.display="block";
+feedback.style.backgroundColor="#ccffcc";
+feedback.textContent="✅ All Correct!";
+} else {
+feedback.style.display="block";
+feedback.style.backgroundColor="#ffcccc";
+feedback.textContent="❌ Some are incorrect. Try again!";
+}
+}
+
+// Random Problem Generator
+let currentAnswer = 0;
+function randomProblem() {
+const dailyWage = Math.floor(Math.random()*1000)+100; // 100-1100
+const days = Math.floor(Math.random()*7)+1; // 1-7
+currentAnswer = dailyWage*days;
+document.getElementById("randomProblem").style.display="block";
+document.getElementById("randomProblem").textContent=`Daily wage: ₱${dailyWage}. Number of days: ${days}. Compute weekly salary.`;
+document.getElementById("feedback10").style.display="none";
+document.getElementById("randomAnswer").value="";
+}
+
+function checkRandomAnswer() {
+const userAnswer = Number(document.getElementById("randomAnswer").value);
+const feedback = document.getElementById("feedback10");
+if(userAnswer === currentAnswer) {
+feedback.style.display="block";
+feedback.style.backgroundColor="#ccffcc";
+feedback.textContent="✅ Correct!";
+} else {
+feedback.style.display="block";
+feedback.style.backgroundColor="#ffcccc";
+feedback.textContent=`❌ Incorrect. Correct answer: ${currentAnswer}`;
+}
+}
+</script>
+
+</body>
+</html>
